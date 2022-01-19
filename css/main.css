@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: #4d4f62;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 8rem 3rem;
+}
+
+.header {
+  max-width: 540px;
+  margin: 0 auto 8rem;
+  text-align: center;
+}
+
+.header__title {
+  font-size: 2.4rem;
+  font-weight: 200;
+}
+
+.header__subtitle {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.header__text {
+  line-height: 2.4rem;
+  opacity: 50%;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  padding: 3rem;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  line-height: 2.3rem;
+  -webkit-box-shadow: 0px 10px 20px rgba(76, 78, 97, 0.2);
+          box-shadow: 0px 10px 20px rgba(76, 78, 97, 0.2);
+}
+
+.card__title {
+  font-size: 2rem;
+}
+
+.card__text {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  opacity: 50%;
+}
+
+.card__img {
+  display: block;
+  margin: 3.5rem 0 0 auto;
+  width: 57px;
+  height: 57px;
+}
+
+.card--green {
+  border-top: 3px solid #44d3d2;
+}
+
+.card--red {
+  border-top: 3px solid #ea5454;
+}
+
+.card--orange {
+  border-top: 3px solid #fcae4a;
+}
+
+.card--blue {
+  border-top: 3px solid #549ef2;
+}
+
+@media (min-width: 767px) {
+  .cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__heading {
+    font-size: 3.6rem;
+  }
+  .header__subheading {
+    font-size: 3.6rem;
+  }
+  .cards {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: '. team .' 'supervisor team calculator' 'supervisor karma calculator' '. karma .';
+    gap: 3rem;
+  }
+  .card--green {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: supervisor;
+  }
+  .card--red {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: team;
+  }
+  .card--orange {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: karma;
+  }
+  .card--blue {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    grid-area: calculator;
+  }
+}
+/*# sourceMappingURL=main.css.map */
